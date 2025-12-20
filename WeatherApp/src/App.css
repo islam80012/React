@@ -1,0 +1,56 @@
+/* Container for the whole page */
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #00b4db, #0083b0); /* Nice blue sky gradient */
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+#root {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* The Weather Card */
+.weather-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.desc {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.weather-icon {
+  width: 100px;
+  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+}
+
+/* Loading state */
+.loading {
+  font-style: italic;
+  opacity: 0.8;
+}
