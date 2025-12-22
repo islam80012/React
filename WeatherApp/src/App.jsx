@@ -4,13 +4,14 @@ import './App.css'
 function App() {
   const [weather, setWeather] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
-  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY
+  const city = 'London';
 
 
 
   useEffect(() => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=London&appid=${API_KEY}&units=metric`)
-      .then(res => res.json())
+     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APIKey=${API_KEY}&units=metric`)
+   .then(res => res.json())
       .then(result => {
         setWeather({
           temp: Math.round(result.main.temp),
